@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   try {
-    QRCode.toDataURL(JSON.stringify(JSON.parse(req.body.data)))
+    QRCode.toDataURL(req.body.data)
       .then((url) => {
         res.status(201).json({ msg: "qrcodeGeerated", url });
       })
