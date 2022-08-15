@@ -1,10 +1,12 @@
 const QRCode = require("qrcode");
 const express = require("express");
+let cors = require("cors");
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 //Routes
 
