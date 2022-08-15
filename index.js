@@ -24,14 +24,20 @@ app.post("/", (req, res) => {
         });
       });
   } catch (error) {
-    res
-      .status(400)
-      .json({
-        msg: "Ocurrio un error al generar el codigo QR, asegurate de enviar el codigo qr {data:string}",
-      });
+    res.status(400).json({
+      msg: "Ocurrio un error al generar el codigo QR, asegurate de enviar el codigo qr {data:string}",
+    });
   }
 });
 
 app.listen(8080, (req, res) => {
   console.log("App on port 8080");
 });
+
+module.exports = app;
+
+// git config --global --unset user.name
+// git config --global --unset user.email
+
+// git config user.name "Christian Contribution Project"
+// git config user.email "christian@personalemail.com"
